@@ -22,7 +22,8 @@ RUN export uid=1000 gid=1000 && user=chrome && \
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get -y install pulseaudio
 
 COPY themes /themes
+COPY /usr /usr
 
 USER chrome
 ENV HOME /home/chrome
-CMD /usr/bin/google-chrome --no-sandbox --test-type --load-extension=/themes/red
+CMD /usr/bin/run-chrome-inside-container red

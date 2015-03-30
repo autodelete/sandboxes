@@ -1,0 +1,3 @@
+#!/bin/bash
+export PULSE_SERVER=tcp:`ip r s | grep default | awk '{ print $3 }'`:4713
+exec /usr/bin/google-chrome --no-sandbox --test-type --load-extension=/themes/$1
