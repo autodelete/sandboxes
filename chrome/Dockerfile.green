@@ -1,0 +1,2 @@
+FROM chrome-red
+CMD /usr/bin/run-chrome-inside-container green

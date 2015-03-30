@@ -1,8 +1,6 @@
 all:
-	sed 's/@FLAVOR/red/' < Dockerfile.template > Dockerfile
-	docker build -t chrome-red .
-	sed 's/@FLAVOR/green/' < Dockerfile.template > Dockerfile
-	docker build -t chrome-green .
+	docker build -f Dockerfile.red -t chrome-red .
+	docker build -f Dockerfile.green -t chrome-green .
 
 install:
 	cp -vr host/* /
