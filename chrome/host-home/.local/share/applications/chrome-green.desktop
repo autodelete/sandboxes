@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Google Chrome Green
+Icon=google-chrome-green.png
+Exec=/usr/bin/google-chrome
+Terminal=false

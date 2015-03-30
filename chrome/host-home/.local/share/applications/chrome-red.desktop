@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Google Chrome Red
+Icon=google-chrome-red.png
+Exec=/usr/bin/google-chrome red
+Terminal=false

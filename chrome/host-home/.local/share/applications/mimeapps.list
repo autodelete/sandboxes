@@ -1,0 +1,7 @@
+
+[Default Applications]
+text/html=chrome-red.desktop
+x-scheme-handler/http=chrome-red.desktop
+x-scheme-handler/https=chrome-red.desktop
+x-scheme-handler/about=chrome-red.desktop
+x-scheme-handler/unknown=chrome-red.desktop

@@ -21,8 +21,7 @@ RUN export uid=1000 gid=1000 && user=chrome && \
 
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get -y install pulseaudio
 
-COPY themes /themes
-COPY /usr /usr
+COPY container /
 
 USER chrome
 ENV HOME /home/chrome

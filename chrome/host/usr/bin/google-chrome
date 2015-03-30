@@ -1,0 +1,5 @@
+#/bin/bash
+FLAVOR=$1
+[ "$FLAVOR"=="" ] && FLAVOR=red
+docker run -d -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix chrome-$FLAVOR # </dev/null 2>/dev/null >/dev/null 
+~
