@@ -3,5 +3,10 @@ FLAVOR=$1
 if [ "$FLAVOR" == "" ]; then
   FLAVOR=red
 fi
-exec docker run --rm -e DISPLAY=:0 -v /tmp/.X11-unix:/tmp/.X11-unix chrome-$FLAVOR # </dev/null 2>/dev/null >/dev/null 
+CONFIG_VOLUME=
+if [ "$FLAVOR" == "green" ]; then
+  mkdir -p $HOME/.config/google-chrome
+  CONFIG_VOLUME="-v $HOME/.config/google-chrome:/home/chrome/.config/google-chrome"
+fi
+exec docker run --rm -e DISPLAY=:0 $CONFIG_VOLUME -v /tmp/.X11-unix:/tmp/.X11-unix chrome-$FLAVOR # </dev/null 2>/dev/null >/dev/null 
 ~
