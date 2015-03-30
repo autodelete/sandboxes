@@ -25,4 +25,4 @@ COPY container /
 
 USER chrome
 ENV HOME /home/chrome
-CMD /usr/bin/run-chrome-inside-container red
+CMD /usr/bin/run-chrome-inside-container @FLAVOR

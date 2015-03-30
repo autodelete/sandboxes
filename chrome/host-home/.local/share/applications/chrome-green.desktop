@@ -3,5 +3,5 @@ Version=1.0
 Type=Application
 Name=Google Chrome Green
 Icon=google-chrome-green.png
-Exec=/usr/bin/google-chrome
+Exec=/usr/bin/google-chrome green
 Terminal=false
