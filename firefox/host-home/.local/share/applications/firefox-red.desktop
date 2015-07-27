@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Firefox Red
+Icon=firefox-red.png
+Exec=bash /usr/bin/firefox red
+Terminal=false

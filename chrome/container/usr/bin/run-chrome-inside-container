@@ -4,4 +4,4 @@ EXTRAS=
 if [ "$1" == "green" ]; then
   EXTRAS=--disable-plugins
 fi
-exec /usr/bin/google-chrome --no-sandbox --test-type --load-extension=/themes/$1 $EXTRAS
+exec /usr/bin/google-chrome --test-type --load-extension=/themes/$1 $EXTRAS

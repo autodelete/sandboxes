@@ -1,0 +1,7 @@
+#!/bin/bash
+export PULSE_SERVER=tcp:`ip r s | grep default | awk '{ print $3 }'`:4713
+EXTRAS=
+if [ "$1" == "green" ]; then
+  EXTRAS=-safe-mode
+fi
+exec /usr/bin/firefox $EXTRAS

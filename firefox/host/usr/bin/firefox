@@ -1,0 +1,12 @@
+#/bin/bash
+FLAVOR=$1
+if [ "$FLAVOR" == "" ]; then
+  FLAVOR=red
+fi
+CONFIG_VOLUME=
+if [ "$FLAVOR" == "green" ]; then
+  mkdir -p $HOME/.config/google-chrome
+  CONFIG_VOLUME="-v $HOME/.mozilla/firefox:/home/chrome/.mozilla/firefox"
+fi
+exec docker run --rm -e DISPLAY=:0 $CONFIG_VOLUME -v /tmp/.X11-unix:/tmp/.X11-unix firefox-$FLAVOR # </dev/null 2>/dev/null >/dev/null 
+~

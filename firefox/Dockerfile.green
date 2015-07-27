@@ -1,0 +1,2 @@
+FROM firefox-red
+CMD /usr/bin/run-firefox-inside-container green
